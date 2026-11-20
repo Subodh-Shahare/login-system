@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>LumaLogin — Login System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="login-card">
+        <header class="brand">
+          <div class="mark">L</div>
+          <b>Luma<span>Login</span></b
+          ><small><i></i> SECURE ACCESS</small>
+        </header>
+        <div class="intro">
+          <p class="eyebrow">WELCOME BACK</p>
+          <h1>Sign in to your account</h1>
+          <p>Enter your details below to continue.</p>
+        </div>
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <div class="input-wrap">
+              <span>✉</span
+              ><input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="username"
+              />
+            </div>
+            <small class="error" id="emailError"></small>
+          </div>
+          <div class="field">
+            <div class="label-row">
+              <label for="password">Password</label
+              ><button type="button" class="text-link" id="forgotBtn">
+                Forgot password?
+              </button>
+            </div>
+            <div class="input-wrap">
+              <span>▣</span
+              ><input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              /><button
+                type="button"
+                class="eye"
+                id="togglePassword"
+                aria-label="Show password"
+              >
+                ◉
+              </button>
+            </div>
+            <small class="error" id="passwordError"></small>
+            <div class="strength" id="strengthWrap" hidden>
+              <div class="track"><span id="strengthBar"></span></div>
+              <small id="strengthText">Password strength</small>
+            </div>
+          </div>
+          <label class="remember"
+            ><input id="rememberMe" type="checkbox" /> Remember me</label
+          >
+          <button class="submit" id="submitBtn" type="submit">
+            <span>Sign in</span><span>→</span>
+          </button>
+          <p
+            id="formMessage"
+            class="message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+        <div class="divider">DEMO ACCOUNT</div>
+        <div class="demo">
+          <p><b>Email</b><code>demo@example.com</code></p>
+          <p><b>Password</b><code>Demo@123</code></p>
+          <button type="button" id="fillDemo" class="text-link">
+            Use demo credentials
+          </button>
+        </div>
+        <p class="signup">
+          New here? <a href="#" id="signupLink">Create an account</a>
+        </p>
+        <footer>Protected demo interface · HTML · CSS · JavaScript</footer>
+      </section>
+      <aside class="promo">
+        <div class="promo-content">
+          <span class="tag">YOUR SPACE. YOUR WORK.</span>
+          <h2>Everything you need,<br /><em>all in one place.</em></h2>
+          <p>
+            A clean, simple sign-in experience designed to help you get where
+            you need to go.
+          </p>
+          <ul>
+            <li>
+              <b>✓</b
+              ><span
+                ><strong>Simple validation</strong
+                ><small>Helpful feedback as you sign in</small></span
+              >
+            </li>
+            <li>
+              <b>✓</b
+              ><span
+                ><strong>Session persistence</strong
+                ><small>Stay signed in on this browser</small></span
+              >
+            </li>
+            <li>
+              <b>✓</b
+              ><span
+                ><strong>Responsive design</strong
+                ><small>Works across screen sizes</small></span
+              >
+            </li>
+          </ul>
+        </div>
+        <small class="promo-foot">DESIGNED FOR A BETTER WORKFLOW　✦</small>
+      </aside>
+    </main>
+    <dialog id="infoDialog">
+      <form method="dialog">
+        <div class="info-icon">i</div>
+        <h2 id="dialogTitle">Information</h2>
+        <p id="dialogMessage"></p>
+        <button class="submit" value="close">Got it</button>
+      </form>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
